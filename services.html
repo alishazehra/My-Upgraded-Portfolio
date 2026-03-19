@@ -20,8 +20,9 @@
 
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html#home">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
+     
       <li><a href="services.html" class="active">Services</a></li>
+       <li><a href="about.html">About</a></li>
       <li><a href="portfolio.html">Projects</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
@@ -65,14 +66,28 @@
     </div>
   </section>
 
-  <!-- SCRIPT FOR HAMBURGER -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('sidebarOverlay');
 
+    function openSidebar() {
+      navLinks.classList.add('show');
+      overlay.classList.add('active');
+      hamburger.classList.add('active');
+      hamburger.innerHTML = '<span class="close-icon">&times;</span>';
+    }
+    function closeSidebar() {
+      navLinks.classList.remove('show');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.innerHTML = '&#9776;';
+    }
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+      navLinks.classList.contains('show') ? closeSidebar() : openSidebar();
     });
+    overlay.addEventListener('click', closeSidebar);
   </script>
 
 </body>

@@ -18,8 +18,9 @@
     <button class="hamburger" id="hamburger">&#9776;</button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
+     
       <li><a href="services.html">Services</a></li>
+       <li><a href="index.html#about">About</a></li>
       <li><a href="portfolio.html">Projects</a></li>
       <li><a href="contact.html" class="active-link">Contact</a></li>
     </ul>
@@ -94,13 +95,29 @@
     <p>&copy; 2026 Alisha Zehra. All rights reserved.</p>
   </footer>
 
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script>
-    // Hamburger menu
+    // Hamburger sidebar toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      navLinks.classList.add('show');
+      overlay.classList.add('active');
+      hamburger.classList.add('active');
+      hamburger.innerHTML = '<span class="close-icon">&times;</span>';
+    }
+    function closeSidebar() {
+      navLinks.classList.remove('show');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.innerHTML = '&#9776;';
+    }
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+      navLinks.classList.contains('show') ? closeSidebar() : openSidebar();
     });
+    overlay.addEventListener('click', closeSidebar);
 
     // Contact form submission
     const form = document.getElementById('contactForm');

@@ -20,14 +20,15 @@
 </div>
     </div>
 
-    <button class="hamburger" id="hamburger">&#9776;</button>
+  <button class="hamburger" id="hamburger">&#9776;</button>
 
     <ul class="nav-links" id="nav-links">
   
-  <li><a href="#home">Home</a></li>
-  <li><a href="about.html">About</a></li>
+  <li><a href="index.html">Home</a></li>
+  
   <li><a href="services.html">Services</a></li>
-  <li><a href="/portfolio.html">Projects</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="portfolio.html">Projects</a></li>
   <li><a href="contact.html">Contact</a></li>
 </ul>
 
@@ -74,34 +75,46 @@
     <p>AI chatbot built using LLM tools.</p>
 
     <div class="project-links">
-      <a href="#" target="_blank">Live Demo</a>
-      <a href="#" target="_blank">Github</a>
+      <a href="https://chat.novaapp.ai/" target="_blank">Live Demo</a>
+      <a href="https://github.com/alishazehra/AI-CHATBOT.git" target="_blank">Github</a>
     </div>
   </div>
 
-  <div class="portfolio-card">
-    <img src="https://tse1.mm.bing.net/th/id/OIP.4MSkA_fQO5LimUuxgzWZgQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="project">
-    <h3>AI Chat Sentiment Analyzer</h3>
-    <p>Web app that analyzes user chat messages and detects emotions using AI/NLP models.</p>
+        
+     
+  
+  
+  
 
-    <div class="project-links">
-      <a href="https://text2data.com/Demo" target="_blank">Live Demo</a>
-      <a href="" target="_blank">Github</a>
+ 
+<div class="project-card">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.4MSkA_fQO5LimUuxgzWZgQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="project">
+      <div class="portfolio-card">
+        <h3>AI Chat Sentiment Analyzer</h3>
+        <p>Web app that analyzes user chat messages and detects emotions (happy, sad, angry) using AI/NLP models.</p>
+
+        <div class="project-links">
+          <a href="https://text2data.com/Demo">Live</a>
+          <a href="https://github.com/alishazehra/AI-Chat-Sentiment-Analyzer.git">Github</a>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="portfolio-card">
-    <img src="https://assets.website-files.com/5e8e816d43060db856099187/63b325e6dfaa8b1c6805c854_5-dark-mode-portfolio-webflow-theme-1.5x.png" alt="project">
-    <h3>Portfolio Website</h3>
-    <p>Responsive portfolio with HTML, CSS, and JavaScript.</p>
+    <div class="portfolio-card">
+      <img src="https://assets.website-files.com/5e8e816d43060db856099187/63b325e6dfaa8b1c6805c854_5-dark-mode-portfolio-webflow-theme-1.5x.png" alt="project">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio with HTML CSS JS.</p>
 
-    <div class="project-links">
-      <a href="#" target="_blank">Live Demo</a>
-      <a href="https://github.com/alishazehra/my-latest-portfolio.git" target="_blank">Github</a>
+        <div class="project-links">
+          <a href="https://tinyurl.com/syeda-portfolio">Live</a>
+          <a href="https://github.com/alishazehra/my-latest-portfolio.git">Github</a>
+        </div>
+      </div>
     </div>
-  </div>
-
 </div>
+
+
 
 </section>
 
@@ -151,15 +164,6 @@
 
 
 
-  <!-- SCRIPT FOR HAMBURGER -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
 
 
 <section class="contact-hero">
@@ -228,13 +232,31 @@
     <p>&copy; 2026 Alisha Zehra. All rights reserved.</p>
   </footer>
 
+  <!-- Overlay for click-outside close -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <script>
-    // Hamburger menu
-    const hamburgers = document.getElementById('hamburger');
-    const navLink = document.getElementById('nav-links');
+    // Hamburger sidebar toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      navLinks.classList.add('show');
+      overlay.classList.add('active');
+      hamburger.classList.add('active');
+      hamburger.innerHTML = '<span class="close-icon">&times;</span>';
+    }
+    function closeSidebar() {
+      navLinks.classList.remove('show');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.innerHTML = '&#9776;';
+    }
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+      navLinks.classList.contains('show') ? closeSidebar() : openSidebar();
     });
+    overlay.addEventListener('click', closeSidebar);
 
     // Contact form submission
     const form = document.getElementById('contactForm');
