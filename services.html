@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Alisha Zehra</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-circle">A</div>
+      <span class="logo-text">Alisha Zehra</span>
+    </div>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section">
+    <h1 class="services-heading">My Services</h1>
+    <p class="services-subheading">Here's what I can do for you  and provide you with latest technology tools.</p>
+
+    <div class="services-container">
+
+      <!-- Card 1: AI Chatbots -->
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Chatbots</h3>
+        <p>Creating intelligent AI chatbots that automate conversations and customer support.</p>
+      </div>
+
+      <!-- Card 2: UI/UX Design -->
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Designing user-friendly and visually appealing web interfaces.</p>
+      </div>
+
+      <!-- Card 3: AI Automation Tools -->
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>AI Automation Tools</h3>
+        <p>Developing AI powered tools to automate business workflows.</p>
+      </div>
+
+      <!-- Card 4: Website Development -->
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Building fast, responsive, and SEO-friendly websites tailored to your brand using modern technologies.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCRIPT FOR HAMBURGER -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

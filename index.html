@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="contact.css">
+   
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+     <div class="logo">
+  <div class="logo-circle">A</div>
+  <span class="logo-text">Alisha Zehra</span>
+</div>
+    </div>
+
+    <button class="hamburger" id="hamburger">&#9776;</button>
+
+    <ul class="nav-links" id="nav-links">
+  
+  <li><a href="#home">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="/portfolio.html">Projects</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+     
+      <h1>Hello, I’m <strong>Alisha Zehra</strong></h1>
+      <p>
+        I’m a Freelance UI/UX Designer and Agentic AI Developer based in Your City. 
+        I build beautiful and immersive web applications with clean code and user-centric design.
+      </p>
+      <a href="contact.html"> <button class="primary-btn">Contact Me</button> </a>
+
+      <div class="stats">
+        <div><h3>15 Y.</h3><p>Experience</p></div>
+        <div><h3>250+</h3><p>Projects</p></div>
+        <div><h3>58</h3><p>Clients</p></div>
+         
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="image-card">
+        <img src="WhatsApp Image 2026-03-17 at 6.41.35 PM.jpeg" alt="profile">
+      </div>
+      
+    </div>
+
+</section> 
+
+ <section id="portfolio">
+
+<h1 class="portfolio-heading">Portfolio Section</h1>
+
+<div class="portfolio-container">
+
+  <div class="portfolio-card">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.V4rykO_TtuKs58vpUPwv8wHaEA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="project">
+    <h3>Nova AI Chatbot</h3>
+    <p>AI chatbot built using LLM tools.</p>
+
+    <div class="project-links">
+      <a href="#" target="_blank">Live Demo</a>
+      <a href="#" target="_blank">Github</a>
+    </div>
+  </div>
+
+  <div class="portfolio-card">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.4MSkA_fQO5LimUuxgzWZgQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="project">
+    <h3>AI Chat Sentiment Analyzer</h3>
+    <p>Web app that analyzes user chat messages and detects emotions using AI/NLP models.</p>
+
+    <div class="project-links">
+      <a href="https://text2data.com/Demo" target="_blank">Live Demo</a>
+      <a href="" target="_blank">Github</a>
+    </div>
+  </div>
+
+  <div class="portfolio-card">
+    <img src="https://assets.website-files.com/5e8e816d43060db856099187/63b325e6dfaa8b1c6805c854_5-dark-mode-portfolio-webflow-theme-1.5x.png" alt="project">
+    <h3>Portfolio Website</h3>
+    <p>Responsive portfolio with HTML, CSS, and JavaScript.</p>
+
+    <div class="project-links">
+      <a href="#" target="_blank">Live Demo</a>
+      <a href="https://github.com/alishazehra/my-latest-portfolio.git" target="_blank">Github</a>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+    
+  
+    
+    
+
+  
+<section class="services-section">
+    <h1 class="services-heading">My Services</h1>
+    <p class="services-subheading">Here's what I can do for you  and provide you with latest technology tools.</p>
+
+    <div class="services-container">
+
+      <!-- Card 1: AI Chatbots -->
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Chatbots</h3>
+        <p>Creating intelligent AI chatbots that automate conversations and customer support.</p>
+      </div>
+
+      <!-- Card 2: UI/UX Design -->
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Designing user-friendly and visually appealing web interfaces.</p>
+      </div>
+
+      <!-- Card 3: AI Automation Tools -->
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>AI Automation Tools</h3>
+        <p>Developing AI powered tools to automate business workflows.</p>
+      </div>
+
+      <!-- Card 4: Website Development -->
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Building fast, responsive, and SEO-friendly websites tailored to your brand using modern technologies.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- SCRIPT FOR HAMBURGER -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+
+<section class="contact-hero">
+    <h1>Contact <span class="gradient-text">Me</span></h1>
+    <p>Have a project in mind or just want to say hello? I'd love to hear from you!</p>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-section">
+    <div class="contact-wrapper">
+
+      <!-- LEFT: Info Cards -->
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p>alishazehra992@example.com</p>
+          </div>
+        </div>
+        
+        <div class="info-card">
+          <div class="info-icon">🟢</div>
+          <div>
+            <h4>Availability</h4>
+            <p>Open for freelance projects</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+       
+      </div>
+       <!-- RIGHT: Contact Form -->
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Alisha Zehra" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="alisha@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Project Inquiry" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon">🚀</span>
+          </button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+<!-- FOOTER -->
+  <footer class="contact-footer">
+    <p>&copy; 2026 Alisha Zehra. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburgers = document.getElementById('hamburger');
+    const navLink = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Contact form submission
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        formStatus.textContent = '⚠️ Please fill in all required fields.';
+        formStatus.className = 'form-status error';
+        return;
+      }
+      const btn = form.querySelector('.submit-btn');
+      const btnText = btn.querySelector('.btn-text');
+      const originalText = btnText.textContent;
+      btn.disabled = true;
+      btnText.textContent = 'Sending...';
+
+      // Send data to Formspree (replace URL with your endpoint)
+      fetch('https://formspree.io/f/mvzwvkne', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      })
+        .then(response => {
+          if (response.ok) {
+            formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
+            formStatus.className = 'form-status success';
+            form.reset();
+          } else {
+            formStatus.textContent = '❌ Something went wrong. Please try again.';
+            formStatus.className = 'form-status error';
+          }
+        })
+        .catch(() => {
+          formStatus.textContent = '❌ Network error. Please try again later.';
+          formStatus.className = 'form-status error';
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btnText.textContent = originalText;
+
+          setTimeout(() => {
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+          }, 5000);
+        });
+    });
+  </script>
+
+</body>
+
+</html>
