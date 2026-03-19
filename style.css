@@ -223,21 +223,57 @@ body{
   }
 
   .hero{
-    flex-direction:column;
+    flex-direction:column-reverse;
     align-items:center;
     text-align:center;
+    padding:40px 20px;
+    gap:10px;
   }
 
   .hero-left{
     max-width:100%;
   }
 
+  .hero-left h1{
+    font-size:28px;
+    margin:15px 0;
+  }
+
+  .hero-left p{
+    font-size:14px;
+    line-height:1.6;
+    padding:0 5px;
+  }
+
   .hero-right{
-    margin-top:30px;
+    margin-top:10px;
+  }
+
+  .image-card{
+    padding:12px;
+  }
+
+  .image-card img{
+    width:180px;
   }
 
   .stats{
     justify-content:center;
+    gap:20px;
+    padding:15px;
+  }
+
+  .stats div h3{
+    font-size:20px;
+  }
+
+  .stats div p{
+    font-size:12px;
+  }
+
+  .primary-btn{
+    padding:10px 22px;
+    font-size:14px;
   }
 }
 
